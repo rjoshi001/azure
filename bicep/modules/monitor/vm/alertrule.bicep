@@ -1,11 +1,11 @@
 //az deployment group create --resource-group <resource-group-name> --template-file <path-to-bicep> --params <path to params.json>
+// multi resource support document - https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-metric-near-real-time#metrics-and-dimensions-supported
 
-// param alertRuleName string = 'AlertRuleName'
 param actionGroupName string = 'oncallrj'
 param location string = 'global'
 param region array
 var resourcetype = 'microsoft.compute/virtualmachines'
-// param subscriptionName string = 'your-subscription-name'
+
 
 var actionGroupEmail = 'ritikaj@netapp.com'
 
