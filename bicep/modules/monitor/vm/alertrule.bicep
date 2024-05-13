@@ -28,6 +28,7 @@ resource supportTeamActionGroup 'Microsoft.Insights/actionGroups@2023-01-01' = {
   }
 }
 
+// iterating over the regions parama and creating alert rule per region 
 resource vmmetricalert 'Microsoft.Insights/metricAlerts@2018-03-01' = [for region in region: {
   name: '${region}-rjvmrule'
   location: location
